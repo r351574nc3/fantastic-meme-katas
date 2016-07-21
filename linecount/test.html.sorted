@@ -1,0 +1,74 @@
+1 var totWidth = 520;          // total width of perferated metal
+1 var yoffset = 25;            // upper-most y position offset
+1       grd.addColorStop(0.0 + gradOffset, "#2F292B"); 
+1   ctx.lineTo(mx + metalWidth, my );
+1     for (var i = xoffset; i< totWidth; i+= db){
+1 <canvas id="e" width="1000" height="640"></canvas>
+1 var hb = 25;                 // verticle distance between center of dots
+1       else {
+1 var altoffset = .5*db; 
+1 var or = 5;                  // outer radius
+1   ctx.fill();
+1  
+1 var totHeight = 525;         // total height of perferated meta
+1 var gradOffset = 0.3;        // offset in gradient of outer circle
+1 }
+1 <script>
+1       alt = false;
+1 var ir = 3;                  // inner radius
+1   for (var j = yoffset; j< totHeight; j+= hb){
+1 <html>
+1         else {
+1       ctx.fillStyle = grd;
+1   ctx.fillStyle = bgcolor;
+1 var metalHeight = 600;
+1 </body>
+1         ctx.fill();
+1         ctx.arc(i + altoffset,j,or,0,Math.PI*2,true);
+1       alt = true;
+1 var xoffset = 20;           // left-most x position offset           
+1   var alt = true;
+1 var bgcolor = "#616362";     // background metalic color :alt #BEBEBE
+1   ctx.moveTo(mx, my);
+1 <body>
+1 window.onload = function() {
+1         ctx.arc(i ,j,or,0,Math.PI*2,true);
+1   }
+1       
+1 </head>
+1 </script>
+1   ctx.lineTo(mx + metalWidth, my + metalHeight);
+1           ctx.arc(i + altoffset,j,ir,0,Math.PI*2,true);
+1   ctx.beginPath();
+1       ctx.beginPath();
+1 var db = 25;                 // horizontal distance between center of dots 
+1         ctx.fillStyle = "#000000";
+1   ctx.closePath();
+1         if (alt){
+1 var metalWidth = 600;
+1   var canvas = document.getElementById("e");
+1         ctx.beginPath();
+1   ctx.lineTo(mx , my + metalHeight);
+1   ]]>
+1         ctx.closePath();
+1       if (alt){
+1       var grd = ctx.createLinearGradient(i, j - or, i, j+or);
+1   ctx.save();
+1 var holeEffect = true;       // black hole in circles
+1 var mx = -20;
+1       ctx.fill();
+1     else {
+1 <!DOCTYPE html>
+1       ctx.closePath();
+1 <head>
+1       if (holeEffect){
+1     if (alt){
+1 var my = -20;               
+1       grd.addColorStop(1, "#E6E6E6");
+1           ctx.arc(i,j,ir,0,Math.PI*2,true);
+1   var ctx = canvas.getContext("2d");
+1 <![CDATA[
+1 </html>
+2         }
+3       }
+3     }

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+<![CDATA[
+var bgcolor = "#616362";     // background metalic color :alt #BEBEBE
+var holeEffect = true;       // black hole in circles
+var db = 25;                 // horizontal distance between center of dots 
+var hb = 25;                 // verticle distance between center of dots
+var or = 5;                  // outer radius
+var ir = 3;                  // inner radius
+var mx = -20;
+var my = -20;               
+var gradOffset = 0.3;        // offset in gradient of outer circle
+var metalWidth = 600;
+var metalHeight = 600;
+var totWidth = 520;          // total width of perferated metal
+var totHeight = 525;         // total height of perferated meta
+var xoffset = 20;           // left-most x position offset           
+var yoffset = 25;            // upper-most y position offset
+var altoffset = .5*db; 
+window.onload = function() {
+  var canvas = document.getElementById("e");
+  var ctx = canvas.getContext("2d");
+  ctx.beginPath();
+  ctx.moveTo(mx, my);
+  ctx.lineTo(mx + metalWidth, my );
+  ctx.lineTo(mx + metalWidth, my + metalHeight);
+  ctx.lineTo(mx , my + metalHeight);
+  ctx.closePath();
+  ctx.fillStyle = bgcolor;
+  ctx.fill();
+  var alt = true;
+  for (var j = yoffset; j< totHeight; j+= hb){
+    for (var i = xoffset; i< totWidth; i+= db){
+      ctx.beginPath();
+      if (alt){
+        ctx.arc(i + altoffset,j,or,0,Math.PI*2,true);
+      }
+      else {
+        ctx.arc(i ,j,or,0,Math.PI*2,true);
+      }
+      ctx.closePath();
+      var grd = ctx.createLinearGradient(i, j - or, i, j+or);
+      grd.addColorStop(0.0 + gradOffset, "#2F292B"); 
+      grd.addColorStop(1, "#E6E6E6");
+      ctx.fillStyle = grd;
+      ctx.fill();
+      if (holeEffect){
+        ctx.beginPath();
+        if (alt){
+          ctx.arc(i + altoffset,j,ir,0,Math.PI*2,true);
+        }
+        else {
+          ctx.arc(i,j,ir,0,Math.PI*2,true);
+        }
+        ctx.closePath();
+        ctx.fillStyle = "#000000";
+        ctx.fill();
+      }
+      
+    }
+    if (alt){
+      alt = false;
+    }
+    else {
+      alt = true;
+    }
+  }
+  ctx.save();
+ 
+  ]]>
+}
+</script>
+</head>
+<body>
+<canvas id="e" width="1000" height="640"></canvas>
+</body>
+</html>
